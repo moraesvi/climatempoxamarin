@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\Font Awesome 5 Free-Regular-400.otf" />
+    <None Remove="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\Font Awesome 5 Free-Regular-400.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MarcTron.Admob" Version="1.6.3" />
+    <PackageReference Include="Polly" Version="7.2.2" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Styles\DarkTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\LightTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WeatherSummaryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="WeatherPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

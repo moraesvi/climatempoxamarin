@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CTWeather.Xamarin"
+             x:Class="CTWeather.Xamarin.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <FontImageSource x:Key="weatherCloud" Color="White" Size="20" FontFamily="FontAwesomeBold" Glyph="{x:Static local:Icon.Cloud}"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
